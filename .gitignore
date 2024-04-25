@@ -1,0 +1,5 @@
+# Ignore node_modules in React app
+my-react-app/node_modules/
+
+# Ignore node_modules in server
+proxy/node_modules/
