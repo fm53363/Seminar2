@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios"; // Import Axios
-import "./App.css";
 
 import Navbar from "./components/Navbar/Navbar";
 import Sales from "./components/Sales/Sales";
 import Home from "./components/Home/Home";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const navLinks = [
@@ -15,7 +16,10 @@ function App() {
   ];
 
   return (
-    <div className="App">
+    <div className="container">
+
+
+      
       <Router>
         <div>
           <Navbar links={navLinks} />
