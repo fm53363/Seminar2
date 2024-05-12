@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import axios from "axios"; // Import Axios
-
 import Navbar from "./components/Navbar/Navbar";
 import Sales from "./components/Sales/Sales";
 import Home from "./components/Home/Home";
@@ -17,14 +14,10 @@ function App() {
 
   return (
     <div className="container">
-
-
-      
       <Router>
         <div>
           <Navbar links={navLinks} />
           <hr></hr>
-
           <Routes>
             <Route path="/" element={<Home />} /> {}
             <Route

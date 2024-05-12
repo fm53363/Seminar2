@@ -36,7 +36,6 @@ app.get("/infostat/:country", async (req, res) => {
   return;
 });
 
-// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

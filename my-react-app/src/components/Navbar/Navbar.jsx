@@ -32,28 +32,20 @@ const Navbar = ({ links }) => {
             Home
           </NavLink>
 
-          <NavLink
-            to="/croatia"
-            className={({ isActive }) => {
-              if (isActive) {
-                return "nav-item nav-link active";
-              }
-              return "nav-item nav-link";
-            }}
-          >
-            Croatia
-          </NavLink>
-          <NavLink
-            to="/slovenia"
-            className={({ isActive }) => {
-              if (isActive) {
-                return "nav-item nav-link active";
-              }
-              return "nav-item nav-link";
-            }}
-          >
-            Slovenia
-          </NavLink>
+          {links.map((link, index) => (
+            <NavLink
+              key={index}
+              to={link.path}
+              className={({ isActive }) => {
+                if (isActive) {
+                  return "nav-item nav-link active";
+                }
+                return "nav-item nav-link";
+              }}
+            >
+              {link.label}
+            </NavLink>
+          ))}
         </div>
       </div>
     </nav>

@@ -1,11 +1,10 @@
 // Home.js
-import React from 'react';
+import React from "react";
 
 const Home = () => {
   return (
     <div>
-      <h2>Welcome to the Homepage</h2>
-      <p>This is the homepage content.</p>
+      <h2>Prodaja cigareta po državama</h2>
     </div>
   );
 };

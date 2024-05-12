@@ -53,14 +53,11 @@ const Sales = ({ country, server }) => {
       codesPerMonth[item.month] = item.qty;
     }
 
-    console.log("Codes per day:", codesPerDay);
-    console.log("Codes per month:", codesPerMonth);
-
     perDayData = {
       labels: Object.keys(codesPerDay),
       datasets: [
         {
-          label: `Data`,
+          label: `broj prodanih cigareta`,
           data: Object.values(codesPerDay), // Example data
           backgroundColor: "rgba(255, 99, 132, 0.2)",
           borderColor: "rgba(255, 99, 132, 1)",
@@ -73,7 +70,7 @@ const Sales = ({ country, server }) => {
       labels: Object.keys(codesPerMonth),
       datasets: [
         {
-          label: `Data`,
+          label: `broj prodanih cigareta`,
           data: Object.values(codesPerMonth), // Example data
           backgroundColor: "rgba(255, 99, 132, 0.2)",
           borderColor: "rgba(255, 99, 132, 1)",
@@ -85,12 +82,13 @@ const Sales = ({ country, server }) => {
 
   return (
     <div class="contanier fluid">
-      <h2>{`${country} Sales Data`}</h2>
+      <h2>{`${country} `}</h2>
 
-      <h2>Po danima</h2>
+      <h4>Dnevna prodaja cigareta</h4>
       <div>{perDayData && <Bar data={perDayData} />}</div>
 
-      <h2>Po mjesecima</h2>
+      <hr></hr>
+      <h4>Mjesečna prodaja cigareta</h4>
       <div>{perMonthData && <Bar data={perMonthData} />}</div>
     </div>
   );
